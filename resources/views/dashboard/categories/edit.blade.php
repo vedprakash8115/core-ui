@@ -11,7 +11,7 @@
                         <h4>Edit category</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('category.update', $category->id) }}">
+                        <form method="POST" action="{{ route('categories.update', $category->id) }}">
                             @csrf
                             @method('PUT')
                             <div class="form-group row">
@@ -27,7 +27,7 @@
                                 <textarea class="form-control" name="code" rows="20" placeholder="Content" required>{{ $category->code }}</textarea>
                             </div>
                             <button class="btn btn-success" type="submit">Update</button>
-                            <a href="{{ route('category.index') }}" class="btn btn-primary">Return</a> 
+                            <a href="{{ route('categories.index') }}" class="btn btn-primary">Return</a> 
                         </form>
                     </div>
                 </div>

@@ -18,7 +18,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
-        return view('dashboard.category.index', compact('categories'));
+        return view('dashboard.categories.index', compact('categories'));
     }
 
 
@@ -31,7 +31,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
 
-        return view('dashboard.category.create', compact('categories'));
+        return view('dashboard.categories.create', compact('categories'));
         // return redirect()->route('dashboard.category.index');
     }
 
@@ -52,7 +52,7 @@ class CategoryController extends Controller
 
         toastr()->error('An error has occurred please try again later.');
 
-        return redirect()->route('category.index');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -63,7 +63,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return View('dashboard.category.show', compact('category'));
+        return view('dashboard.categories.show', compact('category'));
     }
 
     /**
@@ -74,7 +74,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return View('dashboard.category.edit', compact('category'));
+        return View('dashboard.categories.edit', compact('category'));
     }
 
     /**
@@ -87,7 +87,7 @@ class CategoryController extends Controller
     public function update(UpdateCategoryRequest $request, Category $category)
     {
         $category->update($request->all());
-        return redirect()->route('category.index');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -100,6 +100,6 @@ class CategoryController extends Controller
     {
         $category->delete();
         // return Response()->json(['data' => 'delete']);
-        return redirect()->route('category.index');
+        return redirect()->route('categories.index');
     }
 }

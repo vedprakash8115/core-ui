@@ -147,7 +147,7 @@ Route::group(['middleware' => ['get.menu']], function () {
         Route::resource('roles',        'RolesController');
 
 
-        Route::resource('category', 'CategoryController');
+        Route::resource('categories', 'CategoryController');
         Route::resource('products', 'ProductController');
 
         // Route::resource('category', 'CategoryController');

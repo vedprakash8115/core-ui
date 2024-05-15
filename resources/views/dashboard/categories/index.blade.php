@@ -19,7 +19,7 @@
                         </div>
                         @endif
                         <div class="row">
-                            <a href="{{ route('category.create') }}" class="btn btn-primary m-2">Add category</a>
+                            <a href="{{ route('categories.create') }}" class="btn btn-primary m-2">Add category</a>
                         </div>
                         <br>
                         <table class="table table-responsive-sm table-striped">
@@ -45,13 +45,13 @@
                                         <a href="{{ route('prepareSend', ['id' => $category->id] ) }}" class="btn btn-warning">Send</a>
                                     </td>
                                     <td>
-                                        <a href="{{ url('/category/' . $category->id) }}" class="btn btn-primary">View</a>
+                                        <a href="{{ url('/categories/' . $category->id) }}" class="btn btn-primary">View</a>
                                     </td>
                                     <td>
-                                        <a href="{{ url('/category/' . $category->id . '/edit') }}" class="btn btn-primary">Edit</a>
+                                        <a href="{{ url('/categories/' . $category->id . '/edit') }}" class="btn btn-primary">Edit</a>
                                     </td>
                                     <td>
-                                        <form action="{{ route('category.destroy', $category->id ) }}" method="POST">
+                                        <form action="{{ route('categories.destroy', $category->id ) }}" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button class="btn btn-danger">Delete</button>

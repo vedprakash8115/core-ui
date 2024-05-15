@@ -11,7 +11,7 @@
                         <h4>Add Template</h4>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('category.store') }}">
+                        <form method="POST" action="{{ route('categories.store') }}">
                             @csrf
                             <div class="form-group row">
                                 <label>Name</label>

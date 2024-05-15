@@ -19,7 +19,7 @@
                         <p>{{ $category->code }}</p>
 
 
-                        <a href="{{ route('category.index') }}" class="btn btn-primary">Return</a> 
+                        <a href="{{ route('categories.index') }}" class="btn btn-primary">Return</a> 
                     </div>
                 </div>
             </div>
