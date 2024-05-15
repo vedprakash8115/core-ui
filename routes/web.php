@@ -13,6 +13,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SellersController;
 
 Route::group(['middleware' => ['get.menu']], function () {
     Route::get('/', function () {
@@ -149,6 +150,7 @@ Route::group(['middleware' => ['get.menu']], function () {
 
         Route::resource('categories', 'CategoryController');
         Route::resource('products', 'ProductController');
+        Route::resource('sellers', 'SellersController');
 
         // Route::resource('category', 'CategoryController');
 
