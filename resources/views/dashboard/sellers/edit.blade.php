@@ -15,24 +15,24 @@
                             @csrf
                             @method('PUT')
                             <div class="form-group row">
-                                <label>Name</label>
+                                <label>Shop Name</label>
                                 <input class="form-control" type="text" placeholder="Name" name="shop_name" required autofocus value="{{ $seller->shop_name }}"/>
                             </div>
                             <div class="form-group row">
-                                <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="address" required value="{{ $seller->address }}"/>
+                                <label>Address</label>
+                                <input class="form-control" type="text" placeholder="Address" name="address" required value="{{ $seller->address }}"/>
                             </div>
                             <div class="form-group row">
-                                <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="contact_person" required value="{{ $seller->contact_person }}"/>
+                                <label>Contact Person</label>
+                                <input class="form-control" type="text" placeholder="Contact Person" name="contact_person" required value="{{ $seller->contact_person }}"/>
                             </div>
                             <div class="form-group row">
-                                <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="contact_number" required value="{{ $seller->contact_number }}"/>
+                                <label>Contact Number</label>
+                                <input class="form-control" type="number" placeholder="Contact Number" name="contact_number" required value="{{ $seller->contact_number }}"/>
                             </div>
                             <div class="form-group row">
-                                <label>Subject</label>
-                                <input class="form-control" type="text" placeholder="Subject" name="shop_code" required value="{{ $seller->shop_code }}"/>
+                                <label>Shop Code</label>
+                                <input class="form-control" type="text" placeholder="Shop Code" name="shop_code" required value="{{ $seller->shop_code }}"/>
                             </div>
                             
                             <button class="btn btn-success" type="submit">Update</button>

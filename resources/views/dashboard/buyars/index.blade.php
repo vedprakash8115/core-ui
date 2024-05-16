@@ -19,43 +19,38 @@
                         </div>
                         @endif
                         <div class="row">
-                            <a href="{{ route('sellers.create') }}" class="btn btn-primary m-2">Add Saller</a>
+                            <a href="{{ route('buyars.create') }}" class="btn btn-primary m-2">Add buyar</a>
                         </div>
                         <br>
                         <table class="table table-responsive-sm table-striped">
                             <thead>
                                 <tr>
-                                    <th>shop_name</th>
-                                    <th>address</th>
-                                    <th>contact_person</th>
-                                    <th>contact_number</th>
-                                    <th>shop_code</th>
-                                    <th>send</th>
-                                    <th>View</th>
-                                    <th>Edit</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Address</th>
+                                    <th>Code</th>
+                                    <th class="text-center">Action</th>
                                     <th>Delete</th>
+                                    
+                                    
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach($sellers as $seller)
+                                @foreach($buyars as $buyar)
                               
                                 <tr>
-                                    <td><strong>{{ $seller->shop_name }}</strong></td>
-                                    <td><strong>{{ $seller->address }}</strong></td>
-                                    <td><strong>{{ $seller->contact_person }}</strong></td>
-                                    <td><strong>{{ $seller->contact_number }}</strong></td>
-                                    <td><strong>{{ $seller->shop_code }}</strong></td>
-                                    <td>
-                                        <a href="{{ route('prepareSend', ['id' => $seller->id] ) }}" class="btn btn-warning">Send</a>
+                                    <td><strong>{{ $buyar->name }}</strong></td>
+                                    <td><strong>{{ $buyar->email }}</strong></td>
+                                    <td><strong>{{ $buyar->address }}</strong></td>
+                                    <td><strong>{{ $buyar->code }}</strong></td>
+                                    <td class="text-center">
+                                        <a href="{{ route('prepareSend', ['id' => $buyar->id] ) }}" class="btn btn-warning">Send</a>
+                                        <a href="{{ url('/buyars/' . $buyar->id) }}" class="btn btn-primary">View</a>
+                                         <a href="{{ url('/buyars/' . $buyar->id . '/edit') }}" class="btn btn-primary">Edit</a>
                                     </td>
+                                    
                                     <td>
-                                        <a href="{{ url('/sellers/' . $seller->id) }}" class="btn btn-primary">View</a>
-                                    </td>
-                                    <td>
-                                        <a href="{{ url('/sellers/' . $seller->id . '/edit') }}" class="btn btn-primary">Edit</a>
-                                    </td>
-                                    <td>
-                                        <form action="{{ route('sellers.destroy', $seller->id ) }}" method="POST">
+                                        <form action="{{ route('buyars.destroy', $buyar->id ) }}" method="POST">
                                             @method('DELETE')
                                             @csrf
                                             <button class="btn btn-danger">Delete</button>

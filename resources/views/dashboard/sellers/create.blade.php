@@ -15,23 +15,23 @@
                             @csrf
                             <div class="form-group row">
                                 <label>Name</label>
-                                <input class="form-control" type="text" placeholder="Name" name="shop_name" required autofocus />
+                                <input class="form-control" type="text" placeholder="Shop Name" name="shop_name" required autofocus />
                             </div>
                             <div class="form-group row">
                                 <label>Short Name</label>
                                 <input class="form-control" type="text" placeholder="Short Name" name="address" required />
                             </div>
                             <div class="form-group row">
-                                <label>Code</label>
-                                <input class="form-control" type="text" placeholder="Code" name="contact_person" required />
+                                <label>Contact Person</label>
+                                <input class="form-control" type="text" placeholder="Contact Person" name="contact_person" required />
                             </div>
                             <div class="form-group row">
-                                <label>Code</label>
-                                <input class="form-control" type="text" placeholder="Code" name="contact_number" required />
+                                <label>Contact Number</label>
+                                <input class="form-control" type="text" placeholder="Contact Number" name="contact_number" required />
                             </div>
                             <div class="form-group row">
-                                <label>Code</label>
-                                <input class="form-control" type="text" placeholder="Code" name="shop_code" required />
+                                <label>Shop Code</label>
+                                <input class="form-control" type="text" placeholder="Shop Code" name="shop_code" required />
                             </div>
 
                             <button class="btn btn-success" type="submit">Add</button>

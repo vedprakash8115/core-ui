@@ -29,9 +29,9 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
+        $category = Category::all();
 
-        return view('dashboard.categories.create', compact('categories'));
+        return view('dashboard.categories.create', compact('category'));
         // return redirect()->route('dashboard.category.index');
     }
 

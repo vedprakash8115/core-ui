@@ -26,7 +26,7 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th>Subject</th>
+                                    <th>Subject</th> 
                                     <th></th>
                                     <th></th>
                                     <th></th>

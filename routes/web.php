@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\BuyarsController;
+use App\Http\Controllers\BuyersController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SellersController;
@@ -148,9 +150,10 @@ Route::group(['middleware' => ['get.menu']], function () {
         Route::resource('roles',        'RolesController');
 
 
-        Route::resource('categories', 'CategoryController');
+        Route::resource('categories', 'CategoryController'); 
         Route::resource('products', 'ProductController');
         Route::resource('sellers', 'SellersController');
+        Route::resource('buyars', 'BuyarsController');
 
         // Route::resource('category', 'CategoryController');
 

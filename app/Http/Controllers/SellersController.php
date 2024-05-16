@@ -49,9 +49,9 @@ class SellersController extends Controller
      * @param  \App\Models\Sellers  $sellers
      * @return \Illuminate\Http\Response
      */
-    public function show(Sellers $sellers)
+    public function show(Sellers $seller)
     {
-        return view('dashboard.sellers.show', compact('sellers'));
+        return view('dashboard.sellers.show', compact('seller'));
     }
 
     /**
